@@ -8,5 +8,13 @@ interface Participant {
 interface Rating {
   id: string;
   participantId: string;
-  rating: number;
+  rating: RatingCategories;
+}
+
+interface RatingCategories {
+  song: number;
+  presentation: number;
+  stageshow: number;
+  outfit: number;
+  glitter: number;
 }
