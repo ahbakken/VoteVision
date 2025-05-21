@@ -1,0 +1,226 @@
+{
+  "participants": [
+    {
+      "id": "1",
+      "name": "Shkodra Elektronike",
+      "country": "Albania",
+      "song": "Zjerm"
+    },
+    {
+      "id": "2",
+      "name": "PARG",
+      "country": "Armenia",
+      "song": "SURVIVOR"
+    },
+    {
+      "id": "3",
+      "name": "Go-Jo",
+      "country": "Australia",
+      "song": "Milkshake Man"
+    },
+    {
+      "id": "4",
+      "name": "JJ",
+      "country": "Austria",
+      "song": "Wasted Love"
+    },
+    {
+      "id": "5",
+      "name": "Mamagama",
+      "country": "Azerbaijan",
+      "song": "Run With U"
+    },
+    {
+      "id": "6",
+      "name": "Red Sebastian",
+      "country": "Belgium",
+      "song": "Strobe Lights"
+    },
+    {
+      "id": "7",
+      "name": "Marko Bošnjak",
+      "country": "Croatia",
+      "song": "Poison Cake"
+    },
+    {
+      "id": "8",
+      "name": "Theo Evan",
+      "country": "Cyprus",
+      "song": "Shh"
+    },
+    {
+      "id": "9",
+      "name": "ADONXS",
+      "country": "Czechia",
+      "song": "Kiss Kiss Goodbye"
+    },
+    {
+      "id": "10",
+      "name": "Sissal",
+      "country": "Denmark",
+      "song": "Hallucination"
+    },
+    {
+      "id": "11",
+      "name": "Tommy Cash",
+      "country": "Estonia",
+      "song": "Espresso Macchiato"
+    },
+    {
+      "id": "12",
+      "name": "Erika Vikman",
+      "country": "Finland",
+      "song": "ICH KOMME"
+    },
+    {
+      "id": "13",
+      "name": "Louane",
+      "country": "France",
+      "song": "maman"
+    },
+    {
+      "id": "14",
+      "name": "Mariam Shengelia",
+      "country": "Georgia",
+      "song": "Freedom"
+    },
+    {
+      "id": "15",
+      "name": "Abor & Tynna",
+      "country": "Germany",
+      "song": "Baller"
+    },
+    {
+      "id": "16",
+      "name": "Klavdia",
+      "country": "Greece",
+      "song": "Asteromáta"
+    },
+    {
+      "id": "17",
+      "name": "VÆB",
+      "country": "Iceland",
+      "song": "RÓA"
+    },
+    {
+      "id": "18",
+      "name": "EMMY",
+      "country": "Ireland",
+      "song": "Laika Party"
+    },
+    {
+      "id": "19",
+      "name": "Yuval Raphael",
+      "country": "Israel",
+      "song": "New Day Will Rise"
+    },
+    {
+      "id": "20",
+      "name": "Lucio Corsi",
+      "country": "Italy",
+      "song": "Volevo Essere Un Duro"
+    },
+    {
+      "id": "21",
+      "name": "Tautumeitas",
+      "country": "Latvia",
+      "song": "Bur Man Laimi"
+    },
+    {
+      "id": "22",
+      "name": "Katarsis",
+      "country": "Lithuania",
+      "song": "Tavo Akys"
+    },
+    {
+      "id": "23",
+      "name": "Laura Thorn",
+      "country": "Luxembourg",
+      "song": "La Poupée Monte Le Son"
+    },
+    {
+      "id": "24",
+      "name": "Miriana Conte",
+      "country": "Malta",
+      "song": "SERVING"
+    },
+    {
+      "id": "25",
+      "name": "Nina Žižić",
+      "country": "Montenegro",
+      "song": "Dobrodošli"
+    },
+    {
+      "id": "26",
+      "name": "Claude",
+      "country": "Netherlands",
+      "song": "Cest La Vie"
+    },
+    {
+      "id": "27",
+      "name": "Kyle Alessandro",
+      "country": "Norway",
+      "song": "Lighter"
+    },
+    {
+      "id": "28",
+      "name": "Justyna Steczkowska",
+      "country": "Poland",
+      "song": "GAJA"
+    },
+    {
+      "id": "29",
+      "name": "NAPA",
+      "country": "Portugal",
+      "song": "Deslocado"
+    },
+    {
+      "id": "30",
+      "name": "Gabry Ponte",
+      "country": "San Marino",
+      "song": "Tutta LItalia"
+    },
+    {
+      "id": "31",
+      "name": "Princ",
+      "country": "Serbia",
+      "song": "Mila"
+    },
+    {
+      "id": "32",
+      "name": "Klemen",
+      "country": "Slovenia",
+      "song": "How Much Time Do We Have Left"
+    },
+    {
+      "id": "33",
+      "name": "Melody",
+      "country": "Spain",
+      "song": "ESA DIVA"
+    },
+    {
+      "id": "34",
+      "name": "KAJ",
+      "country": "Sweden",
+      "song": "Bara Bada Bastu"
+    },
+    {
+      "id": "35",
+      "name": "Zoë Më",
+      "country": "Switzerland",
+      "song": "Voyage"
+    },
+    {
+      "id": "36",
+      "name": "Ziferblat",
+      "country": "Ukraine",
+      "song": "Bird of Pray"
+    },
+    {
+      "id": "37",
+      "name": "Remember Monday",
+      "country": "United Kingdom",
+      "song": "What the Hell Just Happened"
+    }
+  ]
+}
