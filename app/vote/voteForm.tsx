@@ -1,16 +1,28 @@
 import { Button } from "~/components/ui/button";
-import { createFormHook, createFormHookContexts } from "@tanstack/react-form";
+import {
+  createFormHook,
+  createFormHookContexts,
+  useStore,
+} from "@tanstack/react-form";
 
 import { z } from "zod/v4";
-import { Input } from "~/components/ui/input";
 import { Label } from "@radix-ui/react-label";
+import { FormInput } from "~/components/ui/form/input-form";
 
 export default function VoteForm() {
   const { fieldContext, formContext } = createFormHookContexts();
 
+  const categories = [
+    "song",
+    "presentation",
+    "stageshow",
+    "outfit",
+    "glitter",
+  ] as const;
+
   const { useAppForm } = createFormHook({
     fieldComponents: {
-      Input,
+      Input: FormInput,
       Button,
     },
     formComponents: {
@@ -49,19 +61,12 @@ export default function VoteForm() {
   });
 
   const form = useAppForm({
-    defaultValues: {
-      song: 0,
-      presentation: 0,
-      stageshow: 0,
-      outfit: 0,
-      glitter: 0,
-    },
     validators: {
-      onChange: ratingCategoriesSchema,
+      onSubmit: ratingCategoriesSchema,
     },
     onSubmit: ({ value }) => {
       // add to the database
-      alert(JSON.stringify(value, null, 2));
+      console.log("Form submitted with values:", value);
     },
   });
 
@@ -73,53 +78,25 @@ export default function VoteForm() {
       }}
       className="flex flex-col gap-4"
     >
-      <div className="flex flex-row gap-2 items-center">
-        <Label className=" font-bold">Song</Label>
-        <form.AppField
-          name="song"
-          children={(field) => <field.Input type="number" />}
-        />
-      </div>
-      <div className="flex flex-row gap-2 items-center">
-        <Label className=" font-bold">Presentation</Label>
-        <form.AppField
-          name="presentation"
-          children={(field) => <field.Input type="number" />}
-        />
-      </div>
-      <div className="flex flex-row gap-2 items-center">
-        <Label className=" font-bold">Stage Show</Label>
-        <form.AppField
-          name="stageshow"
-          children={(field) => <field.Input type="number" />}
-        />
-      </div>
-      <div className="flex flex-row gap-2 items-center">
-        <Label className=" font-bold">Outfit</Label>
-        <form.AppField
-          name="outfit"
-          children={(field) => <field.Input type="number" />}
-        />
-      </div>
-      <div className="flex flex-row gap-2 items-center">
-        <Label className=" font-bold">Glitter</Label>
-        <form.AppField
-          name="glitter"
-          children={(field) => <field.Input type="number" />}
-        />
-      </div>
-      <form.AppField
-        name="glitter"
-        children={(field) => (
-          <field.Button
-            type="submit"
-            variant="default"
-            className="bg-pink-500  hover:bg-pink-600  font-bold py-2 px-4 rounded"
-          >
-            Submit
-          </field.Button>
-        )}
-      />
+      {categories.map((category) => (
+        <div key={category} className="flex flex-row gap-2 items-center">
+          <Label className=" font-bold">{category}</Label>
+          <form.AppField name={category}>
+            {(field) => (
+              <>
+                <FormInput field={field} type="number" />
+                {field.state.meta.errors.map((error, i) => (
+                  <div key={field.name} className="error">
+                    {error?.message}
+                  </div>
+                ))}
+              </>
+            )}
+          </form.AppField>
+        </div>
+      ))}
+
+      <Button type="submit">Submit</Button>
     </form>
   );
 }
