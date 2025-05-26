@@ -22,7 +22,7 @@ export function VotePage() {
 
   return (
     <main className="flex items-center justify-center pt-16 pb-4">
-      <div className="flex-1 flex flex-col items-center gap-16 min-h-0">
+      <div className="flex-1 flex flex-col items-center gap-8 min-h-0">
         <h1 className="text-5xl font-bold text-center">VOTING</h1>
         <h2 className="text-xl font-bold text-center">
           {participant?.country} - {participant?.name} - {participant?.song}
@@ -30,7 +30,7 @@ export function VotePage() {
         <Button variant="outline" onClick={() => navigate("/")}>
           Home
         </Button>
-        {participant && <VoteForm />}
+        {participant && <VoteForm country={participant.country} />}
       </div>
     </main>
   );
