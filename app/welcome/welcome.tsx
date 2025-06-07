@@ -23,7 +23,14 @@ export function Welcome() {
         <Button variant="outline" onClick={() => navigate("/vote")}>
           Go Vote
         </Button>
-
+        <Button
+          variant="outline"
+          onClick={() => {
+            navigate("/result");
+          }}
+        >
+          Result
+        </Button>
         <p>The participants of 2025</p>
         <ul className="grid grid-cols-6 gap-4 text-center">
           {participants.participants.map((participant: Participant) => {

@@ -3,7 +3,7 @@ import useStore from "../store/store";
 import { Button } from "~/components/ui/button";
 import VoteForm from "./voteForm";
 import { useEffect } from "react";
-import { getParticipant } from "./utils";
+import { getParticipantByCountry, getParticipantById } from "./utils";
 
 export function VotePage() {
   const navigate = useNavigate();
@@ -15,10 +15,23 @@ export function VotePage() {
 
   useEffect(() => {
     if (!participant && currentCountry) {
-      const foundParticipant = getParticipant(currentCountry);
-      foundParticipant && setParticipant(foundParticipant);
+      const foundParticipant = getParticipantByCountry(currentCountry);
+      foundParticipant
+        ? setParticipant(foundParticipant)
+        : navigate("/vote?country=Albania");
     }
-  }, [currentCountry]);
+  }, [currentCountry, participant]);
+
+  const handleNext = (next: boolean) => {
+    const participantId = parseInt(participant?.id || "0", 10);
+
+    const id = next ? participantId + 1 : participantId - 1;
+    const nextParticipant = getParticipantById(id.toString());
+    if (participant && nextParticipant) {
+      navigate("/vote?country=" + nextParticipant?.country);
+      setParticipant(nextParticipant);
+    }
+  };
 
   return (
     <main className="flex items-center justify-center pt-16 pb-4">
@@ -31,6 +44,20 @@ export function VotePage() {
           Home
         </Button>
         {participant && <VoteForm country={participant.country} />}
+        <div className="flex-1 flex items-center gap-4">
+          <Button
+            disabled={participant?.id === "1"}
+            onClick={() => handleNext(false)}
+          >
+            Previous
+          </Button>
+          <Button
+            disabled={participant?.id === "37"}
+            onClick={() => handleNext(true)}
+          >
+            Next
+          </Button>
+        </div>
       </div>
     </main>
   );
