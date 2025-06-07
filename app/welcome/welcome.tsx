@@ -20,17 +20,22 @@ export function Welcome() {
         <h1 className="text-2xl font-bold text-center">
           Welcome to <span className="text-blue-500">VoteVision</span>
         </h1>
-        <Button variant="outline" onClick={() => navigate("/vote")}>
-          Go Vote
-        </Button>
-        <Button
-          variant="outline"
-          onClick={() => {
-            navigate("/result");
-          }}
-        >
-          Result
-        </Button>
+        <div className="flex-1 flex items-center gap-4">
+          <Button
+            variant="outline"
+            onClick={() => navigate("/vote?country=Albania")}
+          >
+            Start Voting
+          </Button>
+          <Button
+            variant="outline"
+            onClick={() => {
+              navigate("/result");
+            }}
+          >
+            Result
+          </Button>
+        </div>
         <p>The participants of 2025</p>
         <ul className="grid grid-cols-6 gap-4 text-center">
           {participants.participants.map((participant: Participant) => {
